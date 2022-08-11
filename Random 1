@@ -1,0 +1,27 @@
+$(function(){ 
+
+if($('.selector-department-selector').hasClass('active')){ 
+   $('.selector-department-selector').removeClass('active'); 
+    $('#addMore').not('#'+$(this).attr('href')).attr('target',''); 
+} 
+
+}); 
+ $('.blue').on('click', function(){ 
+   var background = $(this).parent().parent().find('.pink'); 
+   var color = $(this).parent().parent().find('.pink').attr('class'); 
+
+    $(background).css('background-color', color); 
+   });
+   var arr = [ 
+    "one", 
+    "two" 
+]; 
+
+for (var i=0; i < arr.length; i++) { 
+    // Find first element that meets the condition 
+    var next = arr[i]; 
+    console.log(next); 
+    next = next.innerHTML; 
+    // And, in the loop, extract the element from the array (wrapping it in quotes) 
+    arr.splice(next,1); 
+} 
